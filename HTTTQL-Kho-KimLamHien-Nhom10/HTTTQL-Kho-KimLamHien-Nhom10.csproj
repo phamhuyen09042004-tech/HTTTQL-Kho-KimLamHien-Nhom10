@@ -370,51 +370,141 @@
     <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Giaodien\application.png" />
-    <Content Include="Images\Giaodien\baocaoton.png" />
-    <Content Include="Images\Giaodien\category.png" />
-    <Content Include="Images\Giaodien\create1.png" />
-    <Content Include="Images\Giaodien\create2.png" />
-    <Content Include="Images\Giaodien\create3.png" />
-    <Content Include="Images\Giaodien\gd1.png" />
-    <Content Include="Images\Giaodien\gd10.png" />
-    <Content Include="Images\Giaodien\history.png" />
-    <Content Include="Images\Giaodien\human.png" />
-    <Content Include="Images\Giaodien\import.png" />
-    <Content Include="Images\Giaodien\logo1.ico" />
-    <Content Include="Images\Giaodien\ncc.png" />
-    <Content Include="Images\Giaodien\nutnguon.png" />
-    <Content Include="Images\Giaodien\pnk.png" />
-    <Content Include="Images\Giaodien\shipment.png" />
-    <Content Include="Images\Giaodien\update.png" />
-    <Content Include="Images\Giaodien\user2.png" />
-    <Content Include="Images\Giaodien\warehouse.png" />
-    <Content Include="Images\Login\login.jpg" />
-    <Content Include="Images\Login\login1.png" />
-    <Content Include="Images\Login\login15.png" />
-    <Content Include="Images\Login\login2.png" />
-    <Content Include="Images\Login\login3.png" />
-    <Content Include="Images\Login\login4.png" />
-    <Content Include="Images\Login\login5.jpg" />
-    <Content Include="Images\Login\logo.jpg" />
-    <Content Include="Images\Login\ql4.png" />
-    <Content Include="Images\Sanpham\nhan-bac-nam-dinh-da-ma-vang-trang.jpg" />
-    <Content Include="Images\Sanpham\nhan-bac-nam-mat-da.jpg" />
-    <Content Include="Images\Sanpham\nhan-cap-bac-ma-vang.jpg" />
-    <Content Include="Images\Sanpham\Nhan-tron9999.png" />
-    <Content Include="Images\User\admin1.png" />
-    <Content Include="Images\User\hoatdong.png" />
-    <Content Include="Images\User\ql1.png" />
-    <Content Include="Images\User\ql2.png" />
-    <Content Include="Images\User\ql3.png" />
-    <Content Include="Images\User\ql4.png" />
-    <Content Include="Images\User\ql5.png" />
-    <Content Include="Images\User\ql6.png" />
-    <Content Include="Images\User\ql7.png" />
-    <Content Include="Images\User\ql8.png" />
-    <Content Include="Images\User\them1.png" />
-    <Content Include="Images\User\them2.png" />
-    <Content Include="Images\User\user1.png" />
+    <Content Include="Images\Giaodien\application.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\baocaoton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\category.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\create1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\create2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\create3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\gd1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\gd10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\history.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\human.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\import.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\logo1.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\ncc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\nutnguon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\pnk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\shipment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\update.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\user2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Giaodien\warehouse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\login5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login\ql4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sanpham\nhan-bac-nam-dinh-da-ma-vang-trang.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sanpham\nhan-bac-nam-mat-da.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sanpham\nhan-cap-bac-ma-vang.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sanpham\Nhan-tron9999.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\admin1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\hoatdong.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\ql8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\them1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\them2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\User\user1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
