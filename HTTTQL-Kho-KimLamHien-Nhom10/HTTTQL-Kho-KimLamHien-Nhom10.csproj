@@ -118,11 +118,227 @@
     <Compile Include="Class\Functions.cs" />
     <Compile Include="Class\Khoitaoservice.cs" />
     <Compile Include="Class\session.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\FrmBaocaobanchay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\FrmBaocaobanchay.Designer.cs">
+      <DependentUpon>FrmBaocaobanchay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBaocaodoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBaocaodoanhthu.Designer.cs">
+      <DependentUpon>FrmBaocaodoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBaocaotonkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBaocaotonkho.Designer.cs">
+      <DependentUpon>FrmBaocaotonkho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCapnhatgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCapnhatgia.Designer.cs">
+      <DependentUpon>FrmCapnhatgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChitietdonhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChitietdonhang.Designer.cs">
+      <DependentUpon>FrmChitietdonhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChitiethanghoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChitiethanghoa.Designer.cs">
+      <DependentUpon>FrmChitiethanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChitietphieuxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChitietphieuxuat.Designer.cs">
+      <DependentUpon>FrmChitietphieuxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChonkhokiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChonkhokiemke.Designer.cs">
+      <DependentUpon>FrmChonkhokiemke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDoimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDoimatkhau.Designer.cs">
+      <DependentUpon>FrmDoimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGIaodienadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGIaodienadmin.Designer.cs">
+      <DependentUpon>FrmGIaodienadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGiaodienbanhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGiaodienbanhang.Designer.cs">
+      <DependentUpon>FrmGiaodienbanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGiaodienKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGiaodienKT.Designer.cs">
+      <DependentUpon>FrmGiaodienKT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGiaodienquanlykho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGiaodienquanlykho.Designer.cs">
+      <DependentUpon>FrmGiaodienquanlykho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlydondexuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlydondexuat.Designer.cs">
+      <DependentUpon>FrmQuanlydondexuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlygiavon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlygiavon.Designer.cs">
+      <DependentUpon>FrmQuanlygiavon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyhanghoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyhanghoa.Designer.cs">
+      <DependentUpon>FrmQuanlyhanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyhoadonban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyhoadonban.Designer.cs">
+      <DependentUpon>FrmQuanlyhoadonban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyNCC.Designer.cs">
+      <DependentUpon>FrmQuanlyNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyphieukiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyphieukiemke.Designer.cs">
+      <DependentUpon>FrmQuanlyphieukiemke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyphieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyphieunhap.Designer.cs">
+      <DependentUpon>FrmQuanlyphieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyphieuxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyphieuxuat.Designer.cs">
+      <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlytaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlytaikhoan.Designer.cs">
+      <DependentUpon>FrmQuanlytaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyxuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuanlyxuong.Designer.cs">
+      <DependentUpon>FrmQuanlyxuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaodondexuatnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaodondexuatnhap.Designer.cs">
+      <DependentUpon>FrmTaodondexuatnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaohoadonban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaohoadonban.Designer.cs">
+      <DependentUpon>FrmTaohoadonban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaophieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaophieunhap.Designer.cs">
+      <DependentUpon>FrmTaophieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaotaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaotaikhoan.Designer.cs">
+      <DependentUpon>FrmTaotaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaoyeucaukiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaoyeucaukiemke.Designer.cs">
+      <DependentUpon>FrmTaoyeucaukiemke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmThemhanghoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmThemhanghoa.Designer.cs">
+      <DependentUpon>FrmThemhanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmThemkhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmThemkhachhang.Designer.cs">
+      <DependentUpon>FrmThemkhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmThemloaihang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmThemloaihang.Designer.cs">
+      <DependentUpon>FrmThemloaihang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmThemNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmThemNCC.Designer.cs">
+      <DependentUpon>FrmThemNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmThemxuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmThemxuong.Designer.cs">
+      <DependentUpon>FrmThemxuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTheodoitonkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTheodoitonkho.Designer.cs">
+      <DependentUpon>FrmTheodoitonkho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmXulychenhlechkiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmXulychenhlechkiemke.Designer.cs">
+      <DependentUpon>FrmXulychenhlechkiemke.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,16 +366,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\login.jpg" />
-    <Content Include="Images\login1.png" />
-    <Content Include="Images\login3.png" />
-    <Content Include="Images\login4.png" />
-    <Content Include="Images\login5.jpg" />
-    <Content Include="Images\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="BLL\" />
     <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Giaodien\application.png" />
+    <Content Include="Images\Giaodien\baocaoton.png" />
+    <Content Include="Images\Giaodien\category.png" />
+    <Content Include="Images\Giaodien\create1.png" />
+    <Content Include="Images\Giaodien\create2.png" />
+    <Content Include="Images\Giaodien\create3.png" />
+    <Content Include="Images\Giaodien\gd1.png" />
+    <Content Include="Images\Giaodien\gd10.png" />
+    <Content Include="Images\Giaodien\history.png" />
+    <Content Include="Images\Giaodien\human.png" />
+    <Content Include="Images\Giaodien\import.png" />
+    <Content Include="Images\Giaodien\logo1.ico" />
+    <Content Include="Images\Giaodien\ncc.png" />
+    <Content Include="Images\Giaodien\nutnguon.png" />
+    <Content Include="Images\Giaodien\pnk.png" />
+    <Content Include="Images\Giaodien\shipment.png" />
+    <Content Include="Images\Giaodien\update.png" />
+    <Content Include="Images\Giaodien\user2.png" />
+    <Content Include="Images\Giaodien\warehouse.png" />
+    <Content Include="Images\Login\login.jpg" />
+    <Content Include="Images\Login\login1.png" />
+    <Content Include="Images\Login\login15.png" />
+    <Content Include="Images\Login\login2.png" />
+    <Content Include="Images\Login\login3.png" />
+    <Content Include="Images\Login\login4.png" />
+    <Content Include="Images\Login\login5.jpg" />
+    <Content Include="Images\Login\logo.jpg" />
+    <Content Include="Images\Login\ql4.png" />
+    <Content Include="Images\Sanpham\nhan-bac-nam-dinh-da-ma-vang-trang.jpg" />
+    <Content Include="Images\Sanpham\nhan-bac-nam-mat-da.jpg" />
+    <Content Include="Images\Sanpham\nhan-cap-bac-ma-vang.jpg" />
+    <Content Include="Images\Sanpham\Nhan-tron9999.png" />
+    <Content Include="Images\User\admin1.png" />
+    <Content Include="Images\User\hoatdong.png" />
+    <Content Include="Images\User\ql1.png" />
+    <Content Include="Images\User\ql2.png" />
+    <Content Include="Images\User\ql3.png" />
+    <Content Include="Images\User\ql4.png" />
+    <Content Include="Images\User\ql5.png" />
+    <Content Include="Images\User\ql6.png" />
+    <Content Include="Images\User\ql7.png" />
+    <Content Include="Images\User\ql8.png" />
+    <Content Include="Images\User\them1.png" />
+    <Content Include="Images\User\them2.png" />
+    <Content Include="Images\User\user1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

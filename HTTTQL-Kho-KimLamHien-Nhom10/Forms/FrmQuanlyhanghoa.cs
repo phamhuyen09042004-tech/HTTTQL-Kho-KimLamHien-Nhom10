@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HTTTQL_Kho_KimLamHien_Nhom10
+namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 {
-    public partial class Form1 : Form
+    public partial class FrmQuanlyhanghoa : Form
     {
-        public Form1()
+        public FrmQuanlyhanghoa()
         {
             InitializeComponent();
         }
