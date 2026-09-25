@@ -16,7 +16,16 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            try
+            {
+                Class.Khoitaoservice.KhoiTao();
+                Application.Run(new FrmMain());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Lỗi khởi động",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
