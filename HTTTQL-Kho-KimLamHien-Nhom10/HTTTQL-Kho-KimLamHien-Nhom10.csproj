@@ -115,6 +115,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\HanghoaBLL.cs" />
+    <Compile Include="BLL\KhachhangBLL.cs" />
+    <Compile Include="BLL\LoaihangBLL.cs" />
+    <Compile Include="BLL\QuanlyNCCBLL.cs" />
+    <Compile Include="BLL\QuanlyXuongBLL.cs" />
     <Compile Include="Class\Functions.cs" />
     <Compile Include="Class\Khoitaoservice.cs" />
     <Compile Include="Class\session.cs" />
@@ -195,6 +200,12 @@
     </Compile>
     <Compile Include="Forms\FrmGiaodienquanlykho.Designer.cs">
       <DependentUpon>FrmGiaodienquanlykho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmKetquakiemke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmKetquakiemke.Designer.cs">
+      <DependentUpon>FrmKetquakiemke.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -342,6 +353,33 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmChonkhokiemke.resx">
+      <DependentUpon>FrmChonkhokiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaotaikhoan.resx">
+      <DependentUpon>FrmTaotaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaoyeucaukiemke.resx">
+      <DependentUpon>FrmTaoyeucaukiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmThemhanghoa.resx">
+      <DependentUpon>FrmThemhanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmThemkhachhang.resx">
+      <DependentUpon>FrmThemkhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmThemloaihang.resx">
+      <DependentUpon>FrmThemloaihang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmThemNCC.resx">
+      <DependentUpon>FrmThemNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmThemxuong.resx">
+      <DependentUpon>FrmThemxuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -350,6 +388,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -366,7 +405,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
