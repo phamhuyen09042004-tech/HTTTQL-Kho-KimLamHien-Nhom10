@@ -17,7 +17,7 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Class
         public static void Ketnoi()
         {
             //Thiết lập giá trị cho chuỗi kết nối
-            connString = "Data Source=.\\SQLEXPRESS;Initial Catalog=QLDA_NHOM_10;Integrated Security=True;Encrypt=False";
+            connString = "Data Source=LAPTOP-HRD8LQ9N\\SQLEXPRESS;Initial Catalog=QLDA_NHOM_10;Integrated Security=True;Encrypt=False";
 
             Conn = new SqlConnection();        //Cấp phát đối tượng
             Conn.ConnectionString = connString; //Kết nối
