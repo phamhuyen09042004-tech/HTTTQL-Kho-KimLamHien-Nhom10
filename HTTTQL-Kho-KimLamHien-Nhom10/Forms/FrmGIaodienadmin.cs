@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 {
-    public partial class FrmGIaodienadmin : Form
+    public partial class FrmGiaodienadmin : Form
     {
-        public FrmGIaodienadmin()
+        public FrmGiaodienadmin()
         {
             InitializeComponent();
         }

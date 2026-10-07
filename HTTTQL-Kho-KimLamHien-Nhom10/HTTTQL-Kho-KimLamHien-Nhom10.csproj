@@ -177,11 +177,11 @@
     <Compile Include="Forms\FrmDoimatkhau.Designer.cs">
       <DependentUpon>FrmDoimatkhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmGIaodienadmin.cs">
+    <Compile Include="Forms\FrmGiaodienadmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmGIaodienadmin.Designer.cs">
-      <DependentUpon>FrmGIaodienadmin.cs</DependentUpon>
+    <Compile Include="Forms\FrmGiaodienadmin.Designer.cs">
+      <DependentUpon>FrmGiaodienadmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmGiaodienbanhang.cs">
       <SubType>Form</SubType>
