@@ -37,6 +37,13 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 
         private void FrmTaotaikhoan_Load(object sender, EventArgs e)
         {
+            // Nạp icon tiêu đề
+            string iconPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
+            if (File.Exists(iconPath))
+            {
+                this.ShowIcon = true;
+                this.Icon = new Icon(iconPath);
+            }
             LoadDanhSachChucVu();
 
             if (cheDo == "SUA")
@@ -56,18 +63,18 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                 lblTrangThai.Text = "✔ Hoạt động";
                 lblTrangThai.ForeColor = Color.ForestGreen;
 
-                // Ngày cập nhật gần nhất khi tạo mới là ngày hôm nay
-                lblNgayTao.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                // Ngày cập nhật gần nhất khi tạo mới là ngày hôm nay
+                lblNgayTao.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 txtMatKhauTam.Text = "123456"; // Mật khẩu mặc định
-            }
+            }
         }
 
         private void LoadDanhSachChucVu()
         {
             try
             {
-                // Bảng chuc_vu (macv, tencv) theo đúng thiết kế CSDL
-                string sql = "SELECT macv, tencv FROM chuc_vu";
+                // Bảng chuc_vu (macv, tencv) theo đúng thiết kế CSDL
+                string sql = "SELECT macv, tencv FROM chuc_vu";
                 DataTable dt = Functions.GetDataToTable(sql);
                 cboChucVu.DataSource = dt;
                 cboChucVu.DisplayMember = "tencv";
@@ -100,8 +107,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             return maMoi;
         }
 
-        // Tự động sinh tên đăng nhập khi gõ Họ tên ở chế độ TẠO MỚI
-        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        // Tự động sinh tên đăng nhập khi gõ Họ tên ở chế độ TẠO MỚI
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
         {
             if (cheDo == "THEM")
             {
@@ -126,8 +133,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             string[] words = str.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             if (words.Length == 0) return "";
 
-            // Lấy tên chính + chữ cái đầu các từ lót (ví dụ: Trần Quốc Hoàn -> hoantq)
-            string tenChinh = words[words.Length - 1].ToLower();
+            // Lấy tên chính + chữ cái đầu các từ lót (ví dụ: Trần Quốc Hoàn -> hoantq)
+            string tenChinh = words[words.Length - 1].ToLower();
             string hoLot = "";
             for (int i = 0; i < words.Length - 1; i++)
             {
@@ -168,8 +175,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                         lblTrangThai.ForeColor = Color.Red;
                     }
 
-                    // Ngày cập nhật gần nhất
-                    if (r["ngaycapnhat"] != DBNull.Value)
+                    // Ngày cập nhật gần nhất
+                    if (r["ngaycapnhat"] != DBNull.Value)
                     {
                         lblNgayTao.Text = Convert.ToDateTime(r["ngaycapnhat"]).ToString("dd/MM/yyyy");
                     }
@@ -196,8 +203,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             string diaChi = txtDiaChi.Text.Trim();
             string email = txtEmail.Text.Trim();
 
-            // 1. Kiểm tra tính hợp lệ dữ liệu (Validation)
-            if (string.IsNullOrEmpty(hoTen))
+            // 1. Kiểm tra tính hợp lệ dữ liệu (Validation)
+            if (string.IsNullOrEmpty(hoTen))
             {
                 MessageBox.Show("Vui lòng nhập họ và tên nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtHoTen.Focus();
@@ -239,8 +246,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                 return;
             }
 
-            // Kiểm tra định dạng Email hợp lệ
-            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            // Kiểm tra định dạng Email hợp lệ
+            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("Địa chỉ Email không đúng định dạng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEmail.Focus();
@@ -249,8 +256,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 
             string maChucVu = cboChucVu.SelectedValue.ToString();
 
-            // 2. Kiểm tra trùng Email trong CSDL (Email là UNIQUE trong thiết kế)
-            string sqlCheckEmail = $"SELECT COUNT(*) FROM nhan_vien WHERE email = '{email}'";
+            // 2. Kiểm tra trùng Email trong CSDL (Email là UNIQUE trong thiết kế)
+            string sqlCheckEmail = $"SELECT COUNT(*) FROM nhan_vien WHERE email = '{email}'";
             if (cheDo == "SUA")
             {
                 sqlCheckEmail += $" AND manv <> '{txtMaNV.Text.Trim()}'";
@@ -271,28 +278,28 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                     string username = txtTenDangNhap.Text.Trim();
                     string matKhau = txtMatKhauTam.Text.Trim();
 
-                    // Đảm bảo tính duy nhất của tên đăng nhập
-                    string sqlCheckUser = $"SELECT COUNT(*) FROM nhan_vien WHERE tendangnhap = '{username}'";
+                    // Đảm bảo tính duy nhất của tên đăng nhập
+                    string sqlCheckUser = $"SELECT COUNT(*) FROM nhan_vien WHERE tendangnhap = '{username}'";
                     int countUser = Convert.ToInt32(Functions.ExecuteScalarParam(sqlCheckUser) ?? 0);
                     if (countUser > 0)
                     {
                         username = username + maNV.ToLower();
                     }
 
-                    // CHUẨN NGHIỆP VỤ: lanDNdau phải là 1 để kích hoạt đổi mật khẩu khi đăng nhập lần đầu
-                    string sqlInsert = @"INSERT INTO nhan_vien (manv, tennv, tendangnhap, matkhau, lanDNdau, machucvu, sdt, diachi, email, trangthai, ngaycapnhat, ngaytao)
-                                         VALUES (@manv, @tennv, @tendangnhap, @matkhau, 1, @machucvu, @sdt, @diachi, @email, N'Hoạt động', GETDATE(), GETDATE())";
+                    // CHUẨN NGHIỆP VỤ: lanDNdau phải là 1 để kích hoạt đổi mật khẩu khi đăng nhập lần đầu
+                    string sqlInsert = @"INSERT INTO nhan_vien (manv, tennv, tendangnhap, matkhau, lanDNdau, machucvu, sdt, diachi, email, trangthai, ngaycapnhat, ngaytao)
+                                         VALUES (@manv, @tennv, @tendangnhap, @matkhau, 1, @machucvu, @sdt, @diachi, @email, N'Hoạt động', GETDATE(), GETDATE())";
 
                     SqlParameter[] prms = new SqlParameter[]
                     {
-                        new SqlParameter("@manv", maNV),
-                        new SqlParameter("@tennv", hoTen),
-                        new SqlParameter("@tendangnhap", username),
-                        new SqlParameter("@matkhau", matKhau),
-                        new SqlParameter("@machucvu", maChucVu),
-                        new SqlParameter("@sdt", rawSDT),
-                        new SqlParameter("@diachi", diaChi),
-                        new SqlParameter("@email", email)
+            new SqlParameter("@manv", maNV),
+            new SqlParameter("@tennv", hoTen),
+            new SqlParameter("@tendangnhap", username),
+            new SqlParameter("@matkhau", matKhau),
+            new SqlParameter("@machucvu", maChucVu),
+            new SqlParameter("@sdt", rawSDT),
+            new SqlParameter("@diachi", diaChi),
+            new SqlParameter("@email", email)
                     };
 
                     Functions.ExecuteNonQueryParam(sqlInsert, prms);
@@ -300,18 +307,18 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                 }
                 else
                 {
-                    string sqlUpdate = @"UPDATE nhan_vien 
-                                         SET tennv = @tennv, machucvu = @machucvu, sdt = @sdt, diachi = @diachi, email = @email, ngaycapnhat = GETDATE()
-                                         WHERE manv = @manv";
+                    string sqlUpdate = @"UPDATE nhan_vien 
+                                         SET tennv = @tennv, machucvu = @machucvu, sdt = @sdt, diachi = @diachi, email = @email, ngaycapnhat = GETDATE()
+                                         WHERE manv = @manv";
 
                     SqlParameter[] prms = new SqlParameter[]
                     {
-                        new SqlParameter("@manv", txtMaNV.Text.Trim()),
-                        new SqlParameter("@tennv", hoTen),
-                        new SqlParameter("@machucvu", maChucVu),
-                        new SqlParameter("@sdt", rawSDT),
-                        new SqlParameter("@diachi", diaChi),
-                        new SqlParameter("@email", email)
+            new SqlParameter("@manv", txtMaNV.Text.Trim()),
+            new SqlParameter("@tennv", hoTen),
+            new SqlParameter("@machucvu", maChucVu),
+            new SqlParameter("@sdt", rawSDT),
+            new SqlParameter("@diachi", diaChi),
+            new SqlParameter("@email", email)
                     };
 
                     Functions.ExecuteNonQueryParam(sqlUpdate, prms);

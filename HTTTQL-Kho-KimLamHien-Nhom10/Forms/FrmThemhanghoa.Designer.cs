@@ -92,7 +92,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1118, 75);
-            this.guna2Panel3.TabIndex = 15;
+            this.guna2Panel3.TabIndex = 0;
             // 
             // guna2HtmlLabel1
             // 
@@ -275,7 +275,7 @@
             this.lblTrungma.AutoSize = true;
             this.lblTrungma.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblTrungma.ForeColor = System.Drawing.Color.Red;
-            this.lblTrungma.Location = new System.Drawing.Point(280, 96);
+            this.lblTrungma.Location = new System.Drawing.Point(280, 97);
             this.lblTrungma.Name = "lblTrungma";
             this.lblTrungma.Size = new System.Drawing.Size(172, 20);
             this.lblTrungma.TabIndex = 9;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -11,9 +12,7 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
     {
         private string cheDo = "THEM";
         private string maXuongSua = "";
-        private BLL.QuanlyXuongBLL bll = new BLL.QuanlyXuongBLL();
 
-        // Biến trả về cho form Đề xuất nhập kho
         public string MaXuongMoi = "";
         public string TenXuongMoi = "";
 
@@ -34,48 +33,91 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 
         private void FrmThemxuong_Load(object sender, EventArgs e)
         {
-            try
+            string iconPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
+            if (File.Exists(iconPath))
             {
-                string logoPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
-                if (File.Exists(logoPath))
+                this.ShowIcon = true;
+                this.Icon = new Icon(iconPath);
+
+                using (var bmp = new Bitmap(iconPath))
                 {
-                    pic1.Image = Image.FromFile(logoPath);
+                    pic1.Image = new Bitmap(bmp);
                 }
+                pic1.SizeMode = PictureBoxSizeMode.Zoom;
             }
-            catch { }
-            pic1.SizeMode = PictureBoxSizeMode.Zoom;
+
             lblCanhbao.Visible = false;
+            lblCanhbao.Text = "⚠ Xưởng chế tác đã tồn tại!";
 
             if (cheDo == "SUA")
             {
-                this.Text = "Sửa thông tin xưởng chế tác";
+                this.Text = "Sửa xưởng chế tác";
                 label3.Text = "SỬA XƯỞNG CHẾ TÁC";
                 LoadThongTin();
             }
             else
             {
-                this.Text = "Thêm mới xưởng chế tác";
+                this.Text = "Thêm xưởng chế tác";
                 label3.Text = "THÊM XƯỞNG CHẾ TÁC";
             }
 
             txtTenXuong.Focus();
         }
 
+        // Tự động sinh mã xưởng mới: XC001, XC002...
+        private string SinhMaXuong()
+        {
+            string maMoi = "XC001";
+            try
+            {
+                string sql = "SELECT TOP 1 maxuong FROM xuong_che_tac WHERE maxuong LIKE 'XC%' ORDER BY maxuong DESC";
+                DataTable dt = Functions.GetDataToTable(sql);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    string maCu = dt.Rows[0]["maxuong"].ToString().Trim();
+                    string soStr = maCu.Substring(2);
+                    if (int.TryParse(soStr, out int so))
+                    {
+                        maMoi = "XC" + (so + 1).ToString("D3");
+                    }
+                }
+            }
+            catch
+            {
+                maMoi = "XC001";
+            }
+            return maMoi;
+        }
+
+        // Kiểm tra trùng tên xưởng trong CSDL
+        private bool KiemTraTenTrung(string tenXuong)
+        {
+            try
+            {
+                string sql = $"SELECT COUNT(*) FROM xuong_che_tac WHERE tenxuong = N'{tenXuong}'";
+                if (cheDo == "SUA")
+                {
+                    sql += $" AND maxuong <> '{maXuongSua}'";
+                }
+                int count = Convert.ToInt32(Functions.ExecuteScalarParam(sql) ?? 0);
+                return count > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void txtTenXuong_Leave(object sender, EventArgs e)
         {
             string tenXuong = txtTenXuong.Text.Trim();
-            if (tenXuong.Length == 0)
+            if (string.IsNullOrEmpty(tenXuong))
             {
                 lblCanhbao.Visible = false;
                 return;
             }
 
-            if (cheDo == "SUA" && bll.KiemTraTenTrung(tenXuong, maXuongSua))
-                lblCanhbao.Visible = true;
-            else if (cheDo != "SUA" && bll.KiemTraTenTrung(tenXuong))
-                lblCanhbao.Visible = true;
-            else
-                lblCanhbao.Visible = false;
+            lblCanhbao.Visible = KiemTraTenTrung(tenXuong);
         }
 
         private void txtTenXuong_TextChanged(object sender, EventArgs e)
@@ -83,12 +125,39 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             lblCanhbao.Visible = false;
         }
 
+        private void LoadThongTin()
+        {
+            try
+            {
+                string sql = $"SELECT maxuong, tenxuong, sdt, diachi FROM xuong_che_tac WHERE maxuong = '{maXuongSua}'";
+                DataTable dt = Functions.GetDataToTable(sql);
+
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin xưởng chế tác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                    return;
+                }
+
+                DataRow row = dt.Rows[0];
+                txtTenXuong.Text = row["tenxuong"].ToString();
+                mskSDT.Text = row["sdt"].ToString();
+                txtDiachi.Text = row["diachi"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy thông tin: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+        }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string tenXuong = txtTenXuong.Text.Trim();
-            string diachi = txtDiachi.Text.Trim();
+            string diaChi = txtDiachi.Text.Trim();
+            string rawSDT = mskSDT.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Replace("_", "").Trim();
 
-            // 1. Kiểm tra tên xưởng
+            // 1. Kiểm tra bắt buộc nhập tên xưởng
             if (string.IsNullOrEmpty(tenXuong))
             {
                 MessageBox.Show("Vui lòng nhập tên xưởng chế tác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -96,16 +165,16 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                 return;
             }
 
-            if (lblCanhbao.Visible)
+            // 2. Kiểm tra tên xưởng đã tồn tại
+            if (lblCanhbao.Visible || KiemTraTenTrung(tenXuong))
             {
-                MessageBox.Show("Tên xưởng chế tác đã tồn tại, bạn phải nhập tên khác!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xưởng chế tác đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblCanhbao.Visible = true;
                 txtTenXuong.Focus();
                 return;
             }
 
-            // 2. KIỂM TRA SỐ ĐIỆN THOẠI (Bắt buộc đủ 10 chữ số)
-            string rawSDT = mskSDT.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Replace("_", "").Trim();
+            // 3. Kiểm tra số điện thoại
             if (string.IsNullOrEmpty(rawSDT))
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -120,65 +189,75 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
                 return;
             }
 
-            // 3. Kiểm tra địa chỉ
-            if (string.IsNullOrEmpty(diachi))
+            // 4. Kiểm tra địa chỉ
+            if (string.IsNullOrEmpty(diaChi))
             {
                 MessageBox.Show("Vui lòng nhập địa chỉ xưởng chế tác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDiachi.Focus();
                 return;
             }
 
-            string loi;
-            if (cheDo == "SUA")
+            // 5. Lưu vào Database
+            try
             {
-                loi = bll.SuaXuong(maXuongSua, tenXuong, mskSDT.Text.Trim(), diachi);
-            }
-            else
-            {
-                loi = bll.ThemXuong(tenXuong, mskSDT.Text.Trim(), diachi);
-            }
+                if (cheDo == "THEM")
+                {
+                    string maMoi = SinhMaXuong();
+                    string sqlInsert = @"INSERT INTO xuong_che_tac (maxuong, tenxuong, sdt, diachi, trangthai)
+                                         VALUES (@maxuong, @tenxuong, @sdt, @diachi, N'Hoạt động')";
 
-            if (loi != null)
-            {
-                MessageBox.Show(loi, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                    SqlParameter[] prms = new SqlParameter[]
+                    {
+                        new SqlParameter("@maxuong", maMoi),
+                        new SqlParameter("@tenxuong", tenXuong),
+                        new SqlParameter("@sdt", rawSDT),
+                        new SqlParameter("@diachi", diaChi)
+                    };
 
-            // GÁN GIÁ TRỊ TRẢ VỀ CHO FORM ĐỀ XUẤT NHẬP
-            if (cheDo == "THEM")
-            {
-                MaXuongMoi = bll.MaVuaTao;
-                TenXuongMoi = tenXuong;
-                MessageBox.Show("Thêm xưởng chế tác mới thành công!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MaXuongMoi = maXuongSua;
-                TenXuongMoi = tenXuong;
-                MessageBox.Show("Cập nhật xưởng chế tác thành công!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                    Functions.ExecuteNonQueryParam(sqlInsert, prms);
 
-            KhoaTatCa(true);
-            btnLuu.Enabled = false;
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+                    MaXuongMoi = maMoi;
+                    TenXuongMoi = tenXuong;
 
-        private void KhoaTatCa(bool khoa)
-        {
-            txtTenXuong.ReadOnly = khoa;
-            mskSDT.ReadOnly = khoa;
-            txtDiachi.ReadOnly = khoa;
+                    MessageBox.Show("Thêm xưởng chế tác mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    string sqlUpdate = @"UPDATE xuong_che_tac 
+                                         SET tenxuong = @tenxuong, sdt = @sdt, diachi = @diachi 
+                                         WHERE maxuong = @maxuong";
+
+                    SqlParameter[] prms = new SqlParameter[]
+                    {
+                        new SqlParameter("@maxuong", maXuongSua),
+                        new SqlParameter("@tenxuong", tenXuong),
+                        new SqlParameter("@sdt", rawSDT),
+                        new SqlParameter("@diachi", diaChi)
+                    };
+
+                    Functions.ExecuteNonQueryParam(sqlUpdate, prms);
+
+                    MaXuongMoi = maXuongSua;
+                    TenXuongMoi = tenXuong;
+
+                    MessageBox.Show("Cập nhật xưởng chế tác thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lưu dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private bool IsDataChanged()
         {
-            if (txtTenXuong.Text.Trim() != "") return true;
-            string rawSDT = mskSDT.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Trim();
-            if (rawSDT.Length > 0) return true;
-            if (txtDiachi.Text.Trim() != "") return true;
+            if (!string.IsNullOrEmpty(txtTenXuong.Text.Trim())) return true;
+            string rawSDT = mskSDT.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Replace("_", "").Trim();
+            if (!string.IsNullOrEmpty(rawSDT)) return true;
+            if (!string.IsNullOrEmpty(txtDiachi.Text.Trim())) return true;
             return false;
         }
 
@@ -186,6 +265,7 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
         {
             if (!IsDataChanged())
             {
+                this.DialogResult = DialogResult.Cancel;
                 this.Close();
                 return;
             }
@@ -193,35 +273,9 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             if (MessageBox.Show("Dữ liệu đã nhập chưa được lưu. Bạn có muốn hủy không?", "Thông báo",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                ResetValue();
+                this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
-        }
-
-        private void ResetValue()
-        {
-            txtTenXuong.Text = "";
-            mskSDT.Text = "";
-            txtDiachi.Text = "";
-            lblCanhbao.Visible = false;
-        }
-
-        private void LoadThongTin()
-        {
-            DataTable dt = bll.LayTheoMa(maXuongSua);
-
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                MessageBox.Show("Không tìm thấy thông tin xưởng chế tác!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
-                return;
-            }
-
-            DataRow row = dt.Rows[0];
-            txtTenXuong.Text = row["tenxuong"].ToString();
-            mskSDT.Text = row["sdt"].ToString();
-            txtDiachi.Text = row["diachi"].ToString();
         }
     }
 }
