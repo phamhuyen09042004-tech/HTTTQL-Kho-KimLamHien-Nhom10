@@ -19,7 +19,9 @@
         {
             this.pnlTop = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlAvatar = new Guna.UI2.WinForms.Guna2Panel();
+            this.picAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.lblNgayTao = new System.Windows.Forms.Label();
             this.pnlInfo = new Guna.UI2.WinForms.Guna2Panel();
@@ -42,14 +44,12 @@
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
-            this.picAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlAvatar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.pnlInfo.SuspendLayout();
             this.pnlFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -76,10 +76,20 @@
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "THÔNG TIN NGƯỜI DÙNG";
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Image = global::HTTTQL_Kho_KimLamHien_Nhom10.Properties.Resources.login3;
+            this.picLogo.ImageRotate = 0F;
+            this.picLogo.Location = new System.Drawing.Point(15, 10);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(60, 50);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
             // pnlAvatar
             // 
-            this.pnlAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlAvatar.BorderColor = System.Drawing.Color.LightGray;
             this.pnlAvatar.BorderRadius = 15;
             this.pnlAvatar.Controls.Add(this.picAvatar);
@@ -91,8 +101,24 @@
             this.pnlAvatar.Size = new System.Drawing.Size(280, 395);
             this.pnlAvatar.TabIndex = 1;
             // 
+            // picAvatar
+            // 
+            this.picAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.picAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.picAvatar.BorderRadius = 12;
+            this.picAvatar.Image = global::HTTTQL_Kho_KimLamHien_Nhom10.Properties.Resources.admin1;
+            this.picAvatar.ImageRotate = 0F;
+            this.picAvatar.Location = new System.Drawing.Point(15, 15);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(250, 290);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 0;
+            this.picAvatar.TabStop = false;
+            // 
             // lblTrangThai
             // 
+            this.lblTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI", 11.5F, System.Drawing.FontStyle.Bold);
             this.lblTrangThai.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblTrangThai.Location = new System.Drawing.Point(15, 318);
@@ -104,6 +130,7 @@
             // 
             // lblNgayTao
             // 
+            this.lblNgayTao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNgayTao.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblNgayTao.ForeColor = System.Drawing.Color.Firebrick;
             this.lblNgayTao.Location = new System.Drawing.Point(15, 348);
@@ -115,9 +142,6 @@
             // 
             // pnlInfo
             // 
-            this.pnlInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInfo.BorderColor = System.Drawing.Color.LightGray;
             this.pnlInfo.BorderRadius = 15;
             this.pnlInfo.Controls.Add(this.cboChucVu);
@@ -144,6 +168,8 @@
             // 
             // cboChucVu
             // 
+            this.cboChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboChucVu.BackColor = System.Drawing.Color.Transparent;
             this.cboChucVu.BorderColor = System.Drawing.Color.DarkGoldenrod;
             this.cboChucVu.BorderRadius = 8;
@@ -161,6 +187,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.BorderColor = System.Drawing.Color.DarkGoldenrod;
             this.txtEmail.BorderRadius = 8;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -177,6 +204,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiaChi.BorderColor = System.Drawing.Color.DarkGoldenrod;
             this.txtDiaChi.BorderRadius = 8;
             this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -193,6 +221,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSDT.BorderColor = System.Drawing.Color.LightGray;
             this.txtSDT.BorderRadius = 8;
             this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -209,6 +238,7 @@
             // 
             // txtMatKhauTam
             // 
+            this.txtMatKhauTam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMatKhauTam.BorderColor = System.Drawing.Color.LightGray;
             this.txtMatKhauTam.BorderRadius = 8;
             this.txtMatKhauTam.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -227,6 +257,7 @@
             // 
             // txtTenDangNhap
             // 
+            this.txtTenDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenDangNhap.BorderColor = System.Drawing.Color.LightGray;
             this.txtTenDangNhap.BorderRadius = 8;
             this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -245,6 +276,8 @@
             // 
             // txtHoTen
             // 
+            this.txtHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHoTen.BorderColor = System.Drawing.Color.DarkGoldenrod;
             this.txtHoTen.BorderRadius = 8;
             this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -262,6 +295,7 @@
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaNV.BorderColor = System.Drawing.Color.LightGray;
             this.txtMaNV.BorderRadius = 8;
             this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -280,6 +314,7 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
@@ -291,6 +326,7 @@
             // 
             // lblDiaChi
             // 
+            this.lblDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblDiaChi.ForeColor = System.Drawing.Color.Black;
@@ -302,6 +338,7 @@
             // 
             // lblSDT
             // 
+            this.lblSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSDT.AutoSize = true;
             this.lblSDT.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblSDT.ForeColor = System.Drawing.Color.Black;
@@ -313,6 +350,7 @@
             // 
             // lblChucVu
             // 
+            this.lblChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblChucVu.AutoSize = true;
             this.lblChucVu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblChucVu.ForeColor = System.Drawing.Color.Black;
@@ -324,6 +362,7 @@
             // 
             // lblMatKhau
             // 
+            this.lblMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMatKhau.AutoSize = true;
             this.lblMatKhau.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblMatKhau.ForeColor = System.Drawing.Color.Black;
@@ -335,6 +374,7 @@
             // 
             // lblTenDangNhap
             // 
+            this.lblTenDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenDangNhap.AutoSize = true;
             this.lblTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblTenDangNhap.ForeColor = System.Drawing.Color.Black;
@@ -346,6 +386,7 @@
             // 
             // lblHoTen
             // 
+            this.lblHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblHoTen.ForeColor = System.Drawing.Color.Black;
@@ -357,6 +398,7 @@
             // 
             // lblMaNV
             // 
+            this.lblMaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMaNV.AutoSize = true;
             this.lblMaNV.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblMaNV.ForeColor = System.Drawing.Color.Black;
@@ -398,7 +440,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.BorderColor = System.Drawing.Color.DarkGoldenrod;
             this.btnLuu.BorderRadius = 12;
             this.btnLuu.FillColor = System.Drawing.Color.DarkGoldenrod;
@@ -413,31 +455,6 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // picAvatar
-            // 
-            this.picAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.picAvatar.BorderRadius = 12;
-            this.picAvatar.Image = global::HTTTQL_Kho_KimLamHien_Nhom10.Properties.Resources.admin1;
-            this.picAvatar.ImageRotate = 0F;
-            this.picAvatar.Location = new System.Drawing.Point(15, 15);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(250, 290);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 0;
-            this.picAvatar.TabStop = false;
-            // 
-            // picLogo
-            // 
-            this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.Image = global::HTTTQL_Kho_KimLamHien_Nhom10.Properties.Resources.login3;
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(15, 10);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(60, 50);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // FrmTaotaikhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -449,19 +466,18 @@
             this.Controls.Add(this.pnlAvatar);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.Name = "FrmTaotaikhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa thông tin nhân viên";
             this.Load += new System.EventHandler(this.FrmTaotaikhoan_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlAvatar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

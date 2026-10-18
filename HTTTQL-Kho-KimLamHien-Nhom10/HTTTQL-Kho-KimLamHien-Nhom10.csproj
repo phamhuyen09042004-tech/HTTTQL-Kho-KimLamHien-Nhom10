@@ -115,11 +115,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\HanghoaBLL.cs" />
-    <Compile Include="BLL\KhachhangBLL.cs" />
-    <Compile Include="BLL\LoaihangBLL.cs" />
-    <Compile Include="BLL\QuanlyNCCBLL.cs" />
-    <Compile Include="BLL\QuanlyXuongBLL.cs" />
     <Compile Include="Class\Functions.cs" />
     <Compile Include="Class\Khoitaoservice.cs" />
     <Compile Include="Class\session.cs" />
@@ -405,6 +400,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BLL\" />
     <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>

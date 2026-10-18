@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -8,17 +10,9 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 {
     public partial class FrmThemkhachhang : Form
     {
-        // Tạo đối tượng BLL
-        BLL.KhachhangBLL bll = new BLL.KhachhangBLL();
-
-        // Biến trả về cho Form Hóa đơn bán hàng
-        public string MaKHMoi = "";
-        public string TenKHMoi = "";
-        public string PreFilledSDT = "";
-
-        public string GetTenKH() => txtTenKH.Text.Trim();
-        public string GetSDT() => mskSDT.Text.Trim();
-        public string GetDiachi() => txtDiachi.Text.Trim();
+        public string MaKHMoi { get; set; } = "";
+        public string TenKHMoi { get; set; } = "";
+        public string PreFilledSDT { get; set; } = "";
 
         public FrmThemkhachhang()
         {
@@ -26,96 +20,210 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             Functions.ApplyGlobalStyles(this);
         }
 
-        private void FrmThemkhachhang_Load(object sender, EventArgs e)
+        public FrmThemkhachhang(string sdtSanCo)
         {
-            // Tải ảnh an toàn (tránh văng lỗi nếu thiếu file ảnh ngoài đĩa)
-            try
-            {
-                string logoPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
-                if (File.Exists(logoPath))
-                {
-                    pic1.Image = Image.FromFile(logoPath);
-                }
-            }
-            catch { }
-            pic1.SizeMode = PictureBoxSizeMode.Zoom;
-
-            if (!string.IsNullOrEmpty(PreFilledSDT))
-            {
-                mskSDT.Text = PreFilledSDT;
-            }
-
-            txtTenKH.Focus();
+            InitializeComponent();
+            Functions.ApplyGlobalStyles(this);
+            this.PreFilledSDT = sdtSanCo;
         }
 
-        private void KhoaTatCa(bool khoa)
+        private void FrmThemkhachhang_Load(object sender, EventArgs e)
         {
-            txtTenKH.ReadOnly = khoa;
-            mskSDT.ReadOnly = khoa;
-            txtDiachi.ReadOnly = khoa;
+            HienThongBaoLoi("");
+
+            string iconPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
+            if (File.Exists(iconPath))
+            {
+                this.ShowIcon = true;
+                this.Icon = new Icon(iconPath);
+
+                using (var bmp = new Bitmap(iconPath))
+                {
+                    pic1.Image = new Bitmap(bmp);
+                }
+                pic1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+
+            // Điền sẵn số điện thoại từ form Hóa đơn nếu có
+            if (!string.IsNullOrEmpty(PreFilledSDT))
+            {
+                GanGiaTriSDT(PreFilledSDT);
+            }
+
+            // Focus vào ô họ tên
+            Control txtName = LayControl("txtHoten") ?? LayControl("txtTenKH");
+            if (txtName != null) txtName.Focus();
+        }
+
+        // Tự động sinh mã khách hàng KH0001, KH0002...
+        private string SinhMaKhachHang()
+        {
+            string maMoi = "KH0001";
+            try
+            {
+                string sql = "SELECT TOP 1 makh FROM khach_hang WHERE makh LIKE 'KH%' ORDER BY makh DESC";
+                DataTable dt = Functions.GetDataToTable(sql);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    string maCu = dt.Rows[0]["makh"].ToString().Trim();
+                    string soStr = maCu.Substring(2);
+                    if (int.TryParse(soStr, out int so))
+                    {
+                        maMoi = "KH" + (so + 1).ToString("D4");
+                    }
+                }
+            }
+            catch
+            {
+                maMoi = "KH0001";
+            }
+            return maMoi;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string tenKH = txtTenKH.Text.Trim();
-            string sdt = mskSDT.Text.Trim();
-            string diachi = txtDiachi.Text.Trim();
+            string hoTen = LayTextControl("txtHoten") ?? LayTextControl("txtTenKH") ?? "";
+            string rawSDT = LaySDTChuan();
+            string diaChi = LayTextControl("txtDiachi") ?? "";
 
-            // Gọi qua BLL để thực hiện validate và Insert vào bảng khach_hang
-            string loi = bll.ThemKhachHang(tenKH, sdt, diachi);
-            if (loi != null)
+            // 1. Kiểm tra Họ tên (Bắt buộc không rỗng)
+            if (string.IsNullOrEmpty(hoTen))
             {
-                MessageBox.Show(loi, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                HienThongBaoLoi("⚠ Vui lòng nhập họ và tên khách hàng!");
+                FocusControl("txtHoten", "txtTenKH");
                 return;
             }
 
-            // GÁN GIÁ TRỊ TRẢ VỀ CHO FORM HÓA ĐƠN
-            MaKHMoi = bll.MaVuaTao;
-            TenKHMoi = tenKH;
+            // 2. Kiểm tra Số điện thoại (Bắt buộc, đủ 10 số)
+            if (string.IsNullOrEmpty(rawSDT))
+            {
+                HienThongBaoLoi("⚠ Vui lòng nhập số điện thoại khách hàng!");
+                FocusControl("txtSDT", "mskSDT");
+                return;
+            }
 
-            MessageBox.Show("Thêm khách hàng mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (rawSDT.Length < 10)
+            {
+                HienThongBaoLoi("⚠ Số điện thoại chưa nhập đủ 10 số!");
+                FocusControl("txtSDT", "mskSDT");
+                return;
+            }
 
-            KhoaTatCa(true);
-            btnLuu.Enabled = false;
+            // 3. Kiểm tra Địa chỉ (Bắt buộc)
+            if (string.IsNullOrEmpty(diaChi))
+            {
+                HienThongBaoLoi("⚠ Vui lòng nhập địa chỉ của khách hàng!");
+                FocusControl("txtDiachi");
+                return;
+            }
 
-            // Đặt DialogResult = OK để form cha tự động reload lại danh sách / combobox
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+            // 4. Kiểm tra trùng số điện thoại trong DB
+            try
+            {
+                string sqlCheck = $"SELECT COUNT(*) FROM khach_hang WHERE sdt = '{rawSDT}'";
+                int count = Convert.ToInt32(Functions.ExecuteScalarParam(sqlCheck) ?? 0);
+                if (count > 0)
+                {
+                    HienThongBaoLoi($"⚠ Số điện thoại '{rawSDT}' đã được đăng ký cho khách hàng khác!");
+                    FocusControl("txtSDT", "mskSDT");
+                    return;
+                }
 
-        private bool IsDataChanged()
-        {
-            if (!string.IsNullOrEmpty(txtTenKH.Text.Trim())) return true;
+                // 5. Insert vào Database
+                string maKH = SinhMaKhachHang();
+                string sqlInsert = @"INSERT INTO khach_hang (makh, tenkh, diachi, sdt)
+                                     VALUES (@makh, @tenkh, @diachi, @sdt)";
 
-            string rawSDT = mskSDT.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Trim();
-            if (!string.IsNullOrEmpty(rawSDT)) return true;
+                SqlParameter[] prms = new SqlParameter[]
+                {
+                    new SqlParameter("@makh", maKH),
+                    new SqlParameter("@tenkh", hoTen),
+                    new SqlParameter("@diachi", diaChi),
+                    new SqlParameter("@sdt", rawSDT)
+                };
 
-            if (!string.IsNullOrEmpty(txtDiachi.Text.Trim())) return true;
+                Functions.ExecuteNonQueryParam(sqlInsert, prms);
 
-            return false;
+                // Gán dữ liệu trả về cho Form Hóa đơn
+                MaKHMoi = maKH;
+                TenKHMoi = hoTen;
+
+                MessageBox.Show("Thêm mới khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                HienThongBaoLoi("⚠ Lỗi khi lưu dữ liệu: " + ex.Message);
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            if (!IsDataChanged())
-            {
-                this.Close();
-                return;
-            }
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
 
-            if (MessageBox.Show("Dữ liệu đã nhập chưa được lưu. Bạn có chắc chắn muốn hủy không?",
-                                "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+        // ================= CÁC HÀM TIỆN ÍCH HỖ TRỢ CẢ 2 CÁCH ĐẶT TÊN CONTROL =================
+
+        private Control LayControl(string name)
+        {
+            Control[] arr = this.Controls.Find(name, true);
+            return (arr.Length > 0) ? arr[0] : null;
+        }
+
+        private string LayTextControl(string name)
+        {
+            Control c = LayControl(name);
+            return c != null ? c.Text.Trim() : null;
+        }
+
+        private void FocusControl(params string[] names)
+        {
+            foreach (var n in names)
             {
-                resetvalue();
-                this.Close();
+                Control c = LayControl(n);
+                if (c != null)
+                {
+                    c.Focus();
+                    return;
+                }
             }
         }
 
-        private void resetvalue()
+        private string LaySDTChuan()
         {
-            txtTenKH.Text = "";
-            mskSDT.Text = "";
-            txtDiachi.Text = "";
+            string sdt = LayTextControl("txtSDT") ?? LayTextControl("mskSDT") ?? "";
+            return sdt.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Replace("_", "").Trim();
+        }
+
+        private void GanGiaTriSDT(string val)
+        {
+            Control c = LayControl("txtSDT") ?? LayControl("mskSDT");
+            if (c != null) c.Text = val;
+        }
+
+        private void HienThongBaoLoi(string thongBao)
+        {
+            Control lbl = LayControl("lblThongbao");
+            if (lbl != null)
+            {
+                if (string.IsNullOrEmpty(thongBao))
+                {
+                    lbl.Text = "";
+                    lbl.Visible = false;
+                }
+                else
+                {
+                    lbl.Text = thongBao;
+                    lbl.ForeColor = Color.Red;
+                    lbl.Visible = true;
+                }
+            }
+            else if (!string.IsNullOrEmpty(thongBao))
+            {
+                MessageBox.Show(thongBao, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
