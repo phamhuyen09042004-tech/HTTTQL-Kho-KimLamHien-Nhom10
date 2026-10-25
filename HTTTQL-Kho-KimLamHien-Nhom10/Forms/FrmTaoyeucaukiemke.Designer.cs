@@ -39,7 +39,6 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.pic1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;

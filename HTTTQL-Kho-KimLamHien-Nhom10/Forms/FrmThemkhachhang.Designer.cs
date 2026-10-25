@@ -37,7 +37,6 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.pic1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -107,7 +106,7 @@
             this.lblTenKH.AutoSize = true;
             this.lblTenKH.Font = new System.Drawing.Font("Segoe UI", 11.2F, System.Drawing.FontStyle.Bold);
             this.lblTenKH.ForeColor = System.Drawing.Color.Black;
-            this.lblTenKH.Location = new System.Drawing.Point(20, 52);
+            this.lblTenKH.Location = new System.Drawing.Point(20, 44);
             this.lblTenKH.Name = "lblTenKH";
             this.lblTenKH.Size = new System.Drawing.Size(164, 25);
             this.lblTenKH.TabIndex = 1;
@@ -136,7 +135,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(20, 116);
+            this.label2.Location = new System.Drawing.Point(41, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 25);
             this.label2.TabIndex = 2;
@@ -156,7 +155,7 @@
             this.lblDiachi.AutoSize = true;
             this.lblDiachi.Font = new System.Drawing.Font("Segoe UI", 11.2F, System.Drawing.FontStyle.Bold);
             this.lblDiachi.ForeColor = System.Drawing.Color.Black;
-            this.lblDiachi.Location = new System.Drawing.Point(20, 180);
+            this.lblDiachi.Location = new System.Drawing.Point(108, 172);
             this.lblDiachi.Name = "lblDiachi";
             this.lblDiachi.Size = new System.Drawing.Size(76, 25);
             this.lblDiachi.TabIndex = 3;

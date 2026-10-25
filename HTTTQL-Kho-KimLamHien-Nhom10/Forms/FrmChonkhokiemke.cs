@@ -22,11 +22,18 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 
         private void FrmChonkhokiemke_Load(object sender, EventArgs e)
         {
-            // Bọc kiểm tra file để nếu thiếu ảnh cũng không bao giờ bị dừng cả form
-            string logoPath = Path.Combine(Application.StartupPath, "Image", "Giaodien", "logo1.ico");
-            if (File.Exists(logoPath))
+            string iconPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
+            if (File.Exists(iconPath))
             {
-                pic1.Image = Image.FromFile(logoPath);
+                this.ShowIcon = true;
+                this.Icon = new Icon(iconPath);
+
+                // Nạp logo vào ô PictureBox pic1
+                using (var bmp = new Bitmap(iconPath))
+                {
+                    pic1.Image = new Bitmap(bmp);
+                }
+                pic1.SizeMode = PictureBoxSizeMode.Zoom;
             }
 
             // Đặt mặc định trạng thái ban đầu

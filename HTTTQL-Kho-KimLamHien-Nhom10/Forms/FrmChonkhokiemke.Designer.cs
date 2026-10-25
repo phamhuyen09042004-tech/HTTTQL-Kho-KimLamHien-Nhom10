@@ -30,6 +30,7 @@
         {
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pic1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtThongtin = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,15 +43,13 @@
             this.txtXacnhankho = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
-            this.pic1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BorderRadius = 20;
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.pic1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -71,6 +70,18 @@
             this.label3.Size = new System.Drawing.Size(305, 41);
             this.label3.TabIndex = 8;
             this.label3.Text = "CHỌN KHO KIỂM KÊ";
+            // 
+            // pic1
+            // 
+            this.pic1.BackColor = System.Drawing.Color.Transparent;
+            this.pic1.Image = global::HTTTQL_Kho_KimLamHien_Nhom10.Properties.Resources.logo;
+            this.pic1.ImageRotate = 0F;
+            this.pic1.Location = new System.Drawing.Point(52, 4);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(75, 72);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic1.TabIndex = 7;
+            this.pic1.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -282,18 +293,6 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // pic1
-            // 
-            this.pic1.BackColor = System.Drawing.Color.Transparent;
-            this.pic1.Image = global::HTTTQL_Kho_KimLamHien_Nhom10.Properties.Resources.logo;
-            this.pic1.ImageRotate = 0F;
-            this.pic1.Location = new System.Drawing.Point(52, 4);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(75, 72);
-            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic1.TabIndex = 7;
-            this.pic1.TabStop = false;
-            // 
             // FrmChonkhokiemke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -310,9 +309,9 @@
             this.Load += new System.EventHandler(this.FrmChonkhokiemke_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
 
         }

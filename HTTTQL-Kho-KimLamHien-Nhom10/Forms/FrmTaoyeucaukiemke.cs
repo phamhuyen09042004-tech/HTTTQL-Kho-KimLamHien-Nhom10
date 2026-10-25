@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
 using HTTTQL_Kho_KimLamHien_Nhom10.Class;
 
 namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
@@ -18,6 +20,13 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 
         private void FrmTaoyeucaukiemke_Load(object sender, EventArgs e)
         {
+            string iconPath = Path.Combine(Application.StartupPath, "Images", "Giaodien", "logo1.ico");
+            if (File.Exists(iconPath))
+            {
+                this.ShowIcon = true;
+                this.Icon = new Icon(iconPath);
+            }
+
             dtpThoigian.Value = DateTime.Now;
             LoadDanhSachKho();
             LoadDanhSachNhanVien();
