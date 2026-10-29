@@ -354,6 +354,9 @@
     <EmbeddedResource Include="Forms\FrmGiaodienadmin.resx">
       <DependentUpon>FrmGiaodienadmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGiaodienbanhang.resx">
+      <DependentUpon>FrmGiaodienbanhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
