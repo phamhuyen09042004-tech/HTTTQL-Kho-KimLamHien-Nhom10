@@ -27,8 +27,8 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             txtTennhanvien.IconLeft = Image.FromFile(Application.StartupPath + @"\Images\User\ql8.png");
             btnSua.Image = Image.FromFile(Application.StartupPath + @"\Images\User\ql6.png");
             btnThem.Image = Image.FromFile(Application.StartupPath + @"\Images\User\ql3.png");
-            btnDatlaiMK.Image = Image.FromFile(Application.StartupPath + @"\Images\User\ql2.png");
-            btnKhoa.Image = Image.FromFile(Application.StartupPath + @"\Images\User\ql7.png");
+            btnLock.Image = Image.FromFile(Application.StartupPath + @"\Images\User\ql7.png");
+            btnDlaiMK.Image = Image.FromFile(Application.StartupPath + @"\Images\User\ql2.png");
             DataTable dtChucVu = new DataTable();
             btnQuaylai.Image = Image.FromFile(Application.StartupPath + @"\Images\Giaodien\gd10.png");
             dtChucVu.Columns.Add("Text");
@@ -49,10 +49,6 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
             cboChucvu.Height = 45;
             cboChucvu.ItemHeight = 35;
 
-            btnDatlaiMK.Enabled = false;
-            btnKhoa.Enabled = false;
-            btnSua.Enabled = false;
-            btnXem.Enabled = false;
             txtManhanvien.Enabled = false;
             txtManhanvien.Text = "";
         }

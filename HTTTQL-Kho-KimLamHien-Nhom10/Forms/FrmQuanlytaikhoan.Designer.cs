@@ -37,7 +37,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnDatlaiMK = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLock = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.txtManhanvien = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,7 +49,7 @@
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnXem = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDlaiMK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnTimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.txtTennhanvien = new Guna.UI2.WinForms.Guna2TextBox();
@@ -111,26 +111,26 @@
             this.guna2HtmlLabel2.Text = "KIM LAM HIỀN";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnDatlaiMK
+            // btnLock
             // 
-            this.btnDatlaiMK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDatlaiMK.BorderColor = System.Drawing.Color.Goldenrod;
-            this.btnDatlaiMK.BorderRadius = 10;
-            this.btnDatlaiMK.BorderThickness = 2;
-            this.btnDatlaiMK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDatlaiMK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDatlaiMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDatlaiMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDatlaiMK.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDatlaiMK.FocusedColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDatlaiMK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatlaiMK.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnDatlaiMK.Location = new System.Drawing.Point(29, 520);
-            this.btnDatlaiMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDatlaiMK.Name = "btnDatlaiMK";
-            this.btnDatlaiMK.Size = new System.Drawing.Size(180, 78);
-            this.btnDatlaiMK.TabIndex = 3;
-            this.btnDatlaiMK.Text = "Đặt lại mật khẩu";
+            this.btnLock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLock.BorderColor = System.Drawing.Color.Goldenrod;
+            this.btnLock.BorderRadius = 10;
+            this.btnLock.BorderThickness = 2;
+            this.btnLock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLock.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLock.FocusedColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLock.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnLock.Location = new System.Drawing.Point(29, 520);
+            this.btnLock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(180, 78);
+            this.btnLock.TabIndex = 3;
+            this.btnLock.Text = "Khóa";
             // 
             // guna2HtmlLabel3
             // 
@@ -266,10 +266,10 @@
             this.guna2ShadowPanel3.Controls.Add(this.label3);
             this.guna2ShadowPanel3.Controls.Add(this.btnThem);
             this.guna2ShadowPanel3.Controls.Add(this.txtManhanvien);
-            this.guna2ShadowPanel3.Controls.Add(this.btnDatlaiMK);
+            this.guna2ShadowPanel3.Controls.Add(this.btnLock);
             this.guna2ShadowPanel3.Controls.Add(this.btnXem);
             this.guna2ShadowPanel3.Controls.Add(this.btnSua);
-            this.guna2ShadowPanel3.Controls.Add(this.btnKhoa);
+            this.guna2ShadowPanel3.Controls.Add(this.btnDlaiMK);
             this.guna2ShadowPanel3.FillColor = System.Drawing.Color.FloralWhite;
             this.guna2ShadowPanel3.Location = new System.Drawing.Point(1091, 116);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
@@ -318,23 +318,23 @@
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             // 
-            // btnKhoa
+            // btnDlaiMK
             // 
-            this.btnKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKhoa.BorderRadius = 10;
-            this.btnKhoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhoa.FillColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnKhoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoa.ForeColor = System.Drawing.Color.White;
-            this.btnKhoa.Location = new System.Drawing.Point(29, 653);
-            this.btnKhoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnKhoa.Name = "btnKhoa";
-            this.btnKhoa.Size = new System.Drawing.Size(180, 73);
-            this.btnKhoa.TabIndex = 4;
-            this.btnKhoa.Text = "Khóa";
+            this.btnDlaiMK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDlaiMK.BorderRadius = 10;
+            this.btnDlaiMK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDlaiMK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDlaiMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDlaiMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDlaiMK.FillColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnDlaiMK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDlaiMK.ForeColor = System.Drawing.Color.White;
+            this.btnDlaiMK.Location = new System.Drawing.Point(29, 653);
+            this.btnDlaiMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDlaiMK.Name = "btnDlaiMK";
+            this.btnDlaiMK.Size = new System.Drawing.Size(180, 73);
+            this.btnDlaiMK.TabIndex = 4;
+            this.btnDlaiMK.Text = "Đặt lại mật khẩu";
             // 
             // guna2ShadowPanel2
             // 
@@ -536,7 +536,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button btnDatlaiMK;
+        private Guna.UI2.WinForms.Guna2Button btnLock;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2TextBox txtManhanvien;
@@ -548,7 +548,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Guna.UI2.WinForms.Guna2Button btnXem;
         private Guna.UI2.WinForms.Guna2Button btnSua;
-        private Guna.UI2.WinForms.Guna2Button btnKhoa;
+        private Guna.UI2.WinForms.Guna2Button btnDlaiMK;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2Button btnTimkiem;
         private Guna.UI2.WinForms.Guna2TextBox txtTennhanvien;
