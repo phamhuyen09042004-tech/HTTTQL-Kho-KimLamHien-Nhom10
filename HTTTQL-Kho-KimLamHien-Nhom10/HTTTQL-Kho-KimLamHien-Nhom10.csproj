@@ -360,6 +360,9 @@
     <EmbeddedResource Include="Forms\FrmGiaodienKT.resx">
       <DependentUpon>FrmGiaodienKT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGiaodienquanlykho.resx">
+      <DependentUpon>FrmGiaodienquanlykho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
