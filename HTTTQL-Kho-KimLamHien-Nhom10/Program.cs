@@ -22,7 +22,7 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10
                 // Bắt buộc mở kết nối CSDL trước khi nạp form đầu tiên
                 Class.Functions.Ketnoi();
                 Class.Khoitaoservice.KhoiTao();
-                Application.Run(new FrmTaohoadonban());
+                Application.Run(new FrmMain());
 
                 // Đóng kết nối khi tắt app
                 Class.Functions.Ngatketnoi();
