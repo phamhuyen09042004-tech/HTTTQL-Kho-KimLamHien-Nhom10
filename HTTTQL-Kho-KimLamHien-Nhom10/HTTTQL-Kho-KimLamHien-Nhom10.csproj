@@ -378,6 +378,15 @@
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyhoadonban.resx">
+      <DependentUpon>FrmQuanlyhoadonban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyphieuxuat.resx">
+      <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaodondexuatnhap.resx">
+      <DependentUpon>FrmTaodondexuatnhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTaohoadonban.resx">
       <DependentUpon>FrmTaohoadonban.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlytaikhoan.resx">
       <DependentUpon>FrmQuanlytaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaophieunhap.resx">
+      <DependentUpon>FrmTaophieunhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTaotaikhoan.resx">
       <DependentUpon>FrmTaotaikhoan.cs</DependentUpon>
