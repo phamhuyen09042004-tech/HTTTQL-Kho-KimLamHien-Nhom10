@@ -375,14 +375,23 @@
     <EmbeddedResource Include="Forms\FrmGiaodienquanlykho.resx">
       <DependentUpon>FrmGiaodienquanlykho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyhoadonban.resx">
       <DependentUpon>FrmQuanlyhoadonban.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyNCC.resx">
+      <DependentUpon>FrmQuanlyNCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyphieuxuat.resx">
       <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyxuong.resx">
+      <DependentUpon>FrmQuanlyxuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTaodondexuatnhap.resx">
       <DependentUpon>FrmTaodondexuatnhap.cs</DependentUpon>
