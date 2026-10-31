@@ -348,6 +348,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmBaocaodoanhthu.resx">
+      <DependentUpon>FrmBaocaodoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmChitiethanghoa.resx">
       <DependentUpon>FrmChitiethanghoa.cs</DependentUpon>
     </EmbeddedResource>
