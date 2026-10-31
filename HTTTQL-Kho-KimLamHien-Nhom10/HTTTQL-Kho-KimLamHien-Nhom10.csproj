@@ -384,6 +384,9 @@
     <EmbeddedResource Include="Forms\FrmQuanlyhoadonban.resx">
       <DependentUpon>FrmQuanlyhoadonban.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyNCC.resx">
+      <DependentUpon>FrmQuanlyNCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyphieuxuat.resx">
       <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
     </EmbeddedResource>
