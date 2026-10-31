@@ -384,6 +384,9 @@
     <EmbeddedResource Include="Forms\FrmQuanlyphieuxuat.resx">
       <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaodondexuatnhap.resx">
+      <DependentUpon>FrmTaodondexuatnhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTaohoadonban.resx">
       <DependentUpon>FrmTaohoadonban.cs</DependentUpon>
     </EmbeddedResource>
