@@ -357,6 +357,9 @@
     <EmbeddedResource Include="Forms\FrmChitiethanghoa.resx">
       <DependentUpon>FrmChitiethanghoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChitietphieuxuat.resx">
+      <DependentUpon>FrmChitietphieuxuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmChonkhokiemke.resx">
       <DependentUpon>FrmChonkhokiemke.cs</DependentUpon>
     </EmbeddedResource>
