@@ -16,5 +16,13 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmTaohoadonban_Load(object sender, EventArgs e)
+        {
+            btnQuaylai.Image = Image.FromFile(Application.StartupPath + @"\Images\Giaodien\gd10.png");
+            btnTimkiem.Image = Image.FromFile(Application.StartupPath + @"\Images\Login\ql4.png");
+
+        }
+
     }
 }
