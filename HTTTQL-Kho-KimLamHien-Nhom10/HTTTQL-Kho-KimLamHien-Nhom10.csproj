@@ -384,6 +384,9 @@
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlydondexuat.resx">
+      <DependentUpon>FrmQuanlydondexuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyhoadonban.resx">
       <DependentUpon>FrmQuanlyhoadonban.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmThemxuong.resx">
       <DependentUpon>FrmThemxuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmXulychenhlechkiemke.resx">
+      <DependentUpon>FrmXulychenhlechkiemke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
