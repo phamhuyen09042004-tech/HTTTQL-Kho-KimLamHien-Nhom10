@@ -351,9 +351,9 @@
     <EmbeddedResource Include="Forms\FrmChitietdonhang.resx">
       <DependentUpon>FrmChitietdonhang.cs</DependentUpon>
     </EmbeddedResource>
-	  <EmbeddedResource Include="Forms\FrmBaocaobanchay.resx">
-		  <DependentUpon>FrmBaocaobanchay.cs</DependentUpon>
-	  </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBaocaobanchay.resx">
+      <DependentUpon>FrmBaocaobanchay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmBaocaodoanhthu.resx">
       <DependentUpon>FrmBaocaodoanhthu.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyphieukiemke.resx">
       <DependentUpon>FrmQuanlyphieukiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyphieunhap.resx">
+      <DependentUpon>FrmQuanlyphieunhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyphieuxuat.resx">
       <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
