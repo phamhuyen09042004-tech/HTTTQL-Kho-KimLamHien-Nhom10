@@ -161,7 +161,6 @@
             this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic3.TabIndex = 35;
             this.pic3.TabStop = false;
-            this.pic3.Click += new System.EventHandler(this.pic3_Click);
             // 
             // pic2
             // 
@@ -172,7 +171,6 @@
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic2.TabIndex = 34;
             this.pic2.TabStop = false;
-            this.pic2.Click += new System.EventHandler(this.pic2_Click);
             // 
             // pic1
             // 
@@ -183,7 +181,6 @@
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 33;
             this.pic1.TabStop = false;
-            this.pic1.Click += new System.EventHandler(this.pic1_Click);
             // 
             // label1
             // 
@@ -278,7 +275,6 @@
             this.btnHuy.Size = new System.Drawing.Size(180, 45);
             this.btnHuy.TabIndex = 18;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacnhan
             // 
@@ -304,7 +300,6 @@
             this.btnXacnhan.Size = new System.Drawing.Size(180, 45);
             this.btnXacnhan.TabIndex = 17;
             this.btnXacnhan.Text = "Xác nhận";
-            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // label3
             // 
@@ -353,7 +348,6 @@
             this.txtNhaplaiMK.Size = new System.Drawing.Size(312, 52);
             this.txtNhaplaiMK.TabIndex = 26;
             this.txtNhaplaiMK.UseSystemPasswordChar = true;
-            this.txtNhaplaiMK.TextChanged += new System.EventHandler(this.txtNhaplaiMK_TextChanged);
             // 
             // label9
             // 
@@ -414,7 +408,6 @@
             this.txtMatkhaumoi.Size = new System.Drawing.Size(312, 50);
             this.txtMatkhaumoi.TabIndex = 30;
             this.txtMatkhaumoi.UseSystemPasswordChar = true;
-            this.txtMatkhaumoi.TextChanged += new System.EventHandler(this.txtMatkhaumoi_TextChanged);
             // 
             // txtDangnhap
             // 
