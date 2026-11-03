@@ -12,9 +12,18 @@ namespace HTTTQL_Kho_KimLamHien_Nhom10.Forms
 {
     public partial class FrmCapnhatgia : Form
     {
+        
+
         public FrmCapnhatgia()
         {
             InitializeComponent();
+            Class.Functions.ApplyGlobalStyles(this);
+        }
+
+        private void FrmCapnhatgia_Load(object sender, EventArgs e)
+        {
+            btnQuaylai.Image = Image.FromFile(Application.StartupPath + @"\Images\Giaodien\gd10.png");
+
         }
     }
 }

@@ -348,6 +348,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmBaocaobanchay.resx">
+      <DependentUpon>FrmBaocaobanchay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCapnhatgia.resx">
+      <DependentUpon>FrmCapnhatgia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmChitietdonhang.resx">
       <DependentUpon>FrmChitietdonhang.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,8 +369,14 @@
     <EmbeddedResource Include="Forms\FrmChitietphieuxuat.resx">
       <DependentUpon>FrmChitietphieuxuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBaocaotonkho.resx">
+      <DependentUpon>FrmBaocaotonkho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmChonkhokiemke.resx">
       <DependentUpon>FrmChonkhokiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDoimatkhau.resx">
+      <DependentUpon>FrmDoimatkhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmGiaodienadmin.resx">
       <DependentUpon>FrmGiaodienadmin.cs</DependentUpon>
@@ -384,6 +396,8 @@
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlygiavon.resx">
+      <DependentUpon>FrmQuanlygiavon.cs</DependentUpon>
     <EmbeddedResource Include="Forms\FrmQuanlydondexuat.resx">
       <DependentUpon>FrmQuanlydondexuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +455,8 @@
     <EmbeddedResource Include="Forms\FrmThemxuong.resx">
       <DependentUpon>FrmThemxuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTheodoitonkho.resx">
+      <DependentUpon>FrmTheodoitonkho.cs</DependentUpon>
     <EmbeddedResource Include="Forms\FrmXulychenhlechkiemke.resx">
       <DependentUpon>FrmXulychenhlechkiemke.cs</DependentUpon>
     </EmbeddedResource>
