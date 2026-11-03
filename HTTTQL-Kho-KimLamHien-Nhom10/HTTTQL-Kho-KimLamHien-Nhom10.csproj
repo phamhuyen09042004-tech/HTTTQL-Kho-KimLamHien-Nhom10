@@ -357,6 +357,9 @@
     <EmbeddedResource Include="Forms\FrmChitietdonhang.resx">
       <DependentUpon>FrmChitietdonhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBaocaobanchay.resx">
+      <DependentUpon>FrmBaocaobanchay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmBaocaodoanhthu.resx">
       <DependentUpon>FrmBaocaodoanhthu.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,17 +390,34 @@
     <EmbeddedResource Include="Forms\FrmGiaodienquanlykho.resx">
       <DependentUpon>FrmGiaodienquanlykho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlygiavon.resx">
       <DependentUpon>FrmQuanlygiavon.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmQuanlydondexuat.resx">
+      <DependentUpon>FrmQuanlydondexuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyhoadonban.resx">
       <DependentUpon>FrmQuanlyhoadonban.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyNCC.resx">
+      <DependentUpon>FrmQuanlyNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyphieukiemke.resx">
+      <DependentUpon>FrmQuanlyphieukiemke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyphieunhap.resx">
+      <DependentUpon>FrmQuanlyphieunhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuanlyphieuxuat.resx">
       <DependentUpon>FrmQuanlyphieuxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuanlyxuong.resx">
+      <DependentUpon>FrmQuanlyxuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTaodondexuatnhap.resx">
       <DependentUpon>FrmTaodondexuatnhap.cs</DependentUpon>
@@ -437,6 +457,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTheodoitonkho.resx">
       <DependentUpon>FrmTheodoitonkho.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmXulychenhlechkiemke.resx">
+      <DependentUpon>FrmXulychenhlechkiemke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
