@@ -516,6 +516,7 @@
             this.btnDangxuat.Size = new System.Drawing.Size(260, 50);
             this.btnDangxuat.TabIndex = 7;
             this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // guna2Panel2
             // 

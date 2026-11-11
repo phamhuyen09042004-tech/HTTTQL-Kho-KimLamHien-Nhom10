@@ -313,6 +313,7 @@
             this.btnDangxuat.Size = new System.Drawing.Size(260, 50);
             this.btnDangxuat.TabIndex = 7;
             this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // guna2Panel1
             // 
@@ -413,8 +414,8 @@
             // 
             // FrmGiaodienKT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1008);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel3);

@@ -115,9 +115,13 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BaocaoBLL.cs" />
+    <Compile Include="BLL\GiaodienBLL.cs" />
     <Compile Include="Class\Functions.cs" />
     <Compile Include="Class\Khoitaoservice.cs" />
     <Compile Include="Class\session.cs" />
+    <Compile Include="DAL\BaocaoDAL.cs" />
+    <Compile Include="DAL\GiaodienDAL.cs" />
     <Compile Include="Forms\FrmBaocaobanchay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -486,10 +490,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Images\Giaodien\application.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
