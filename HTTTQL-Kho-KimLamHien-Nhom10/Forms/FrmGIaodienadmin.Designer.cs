@@ -161,7 +161,7 @@
             this.lblClicktopbanchay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClicktopbanchay.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClicktopbanchay.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lblClicktopbanchay.Location = new System.Drawing.Point(107, 18);
+            this.lblClicktopbanchay.Location = new System.Drawing.Point(33, 14);
             this.lblClicktopbanchay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClicktopbanchay.Name = "lblClicktopbanchay";
             this.lblClicktopbanchay.Size = new System.Drawing.Size(510, 38);
@@ -1281,6 +1281,7 @@
             this.btnDangxuat1.Size = new System.Drawing.Size(260, 59);
             this.btnDangxuat1.TabIndex = 7;
             this.btnDangxuat1.Text = "Đăng xuất";
+            this.btnDangxuat1.Click += new System.EventHandler(this.btnDangxuat1_Click);
             // 
             // FrmGiaodienadmin
             // 

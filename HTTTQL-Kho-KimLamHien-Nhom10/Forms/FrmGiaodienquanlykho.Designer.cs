@@ -33,16 +33,16 @@
             this.pnlBanchay = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblDaduyet = new System.Windows.Forms.Label();
             this.lblPhieudexuat = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblChoduyet = new System.Windows.Forms.Label();
             this.lblNhap = new System.Windows.Forms.Label();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.pnlDoanhthu = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTonkho = new System.Windows.Forms.Label();
             this.lblClickTonkho = new System.Windows.Forms.Label();
             this.pnlDonhang = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.chartTop5 = new LiveCharts.WinForms.CartesianChart();
@@ -64,8 +64,8 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblChucvu = new System.Windows.Forms.Label();
             this.lblManguoidung = new System.Windows.Forms.Label();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.picAnh = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -122,13 +122,13 @@
             this.pnlBanchay.BackColor = System.Drawing.Color.Transparent;
             this.pnlBanchay.Controls.Add(this.lblDaduyet);
             this.pnlBanchay.Controls.Add(this.lblPhieudexuat);
-            this.pnlBanchay.Controls.Add(this.label1);
+            this.pnlBanchay.Controls.Add(this.lblChoduyet);
             this.pnlBanchay.Controls.Add(this.lblNhap);
             this.pnlBanchay.Controls.Add(this.guna2Separator3);
             this.pnlBanchay.Controls.Add(this.guna2Separator2);
             this.pnlBanchay.Controls.Add(this.guna2Separator6);
             this.pnlBanchay.Controls.Add(this.label7);
-            this.pnlBanchay.Controls.Add(this.label6);
+            this.pnlBanchay.Controls.Add(this.lbl);
             this.pnlBanchay.Controls.Add(this.label);
             this.pnlBanchay.FillColor = System.Drawing.Color.White;
             this.pnlBanchay.Location = new System.Drawing.Point(959, 296);
@@ -167,18 +167,18 @@
             this.lblPhieudexuat.TabIndex = 33;
             this.lblPhieudexuat.Text = "THEO DÕI PHIẾU NHẬP";
             // 
-            // label1
+            // lblChoduyet
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(354, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 31);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Đơn chờ xác nhận:";
+            this.lblChoduyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChoduyet.AutoSize = true;
+            this.lblChoduyet.BackColor = System.Drawing.Color.Transparent;
+            this.lblChoduyet.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoduyet.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblChoduyet.Location = new System.Drawing.Point(354, 201);
+            this.lblChoduyet.Name = "lblChoduyet";
+            this.lblChoduyet.Size = new System.Drawing.Size(212, 31);
+            this.lblChoduyet.TabIndex = 35;
+            this.lblChoduyet.Text = "Đơn chờ xác nhận:";
             // 
             // lblNhap
             // 
@@ -239,18 +239,18 @@
             this.label7.TabIndex = 28;
             this.label7.Text = "Đơn đề xuất đã duyệt:";
             // 
-            // label6
+            // lbl
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label6.Location = new System.Drawing.Point(38, 201);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 31);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Đơn chờ duyệt:";
+            this.lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbl.Location = new System.Drawing.Point(38, 201);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(177, 31);
+            this.lbl.TabIndex = 27;
+            this.lbl.Text = "Đơn chờ duyệt:";
             // 
             // label
             // 
@@ -269,7 +269,7 @@
             // 
             this.pnlDoanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDoanhthu.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDoanhthu.Controls.Add(this.label2);
+            this.pnlDoanhthu.Controls.Add(this.lblTonkho);
             this.pnlDoanhthu.Controls.Add(this.lblClickTonkho);
             this.pnlDoanhthu.FillColor = System.Drawing.Color.White;
             this.pnlDoanhthu.Location = new System.Drawing.Point(956, 11);
@@ -280,18 +280,18 @@
             this.pnlDoanhthu.Size = new System.Drawing.Size(603, 262);
             this.pnlDoanhthu.TabIndex = 4;
             // 
-            // label2
+            // lblTonkho
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(148, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 59);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "5,255,000";
+            this.lblTonkho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTonkho.AutoSize = true;
+            this.lblTonkho.BackColor = System.Drawing.Color.Transparent;
+            this.lblTonkho.Font = new System.Drawing.Font("Segoe UI Black", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTonkho.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblTonkho.Location = new System.Drawing.Point(148, 58);
+            this.lblTonkho.Name = "lblTonkho";
+            this.lblTonkho.Size = new System.Drawing.Size(235, 59);
+            this.lblTonkho.TabIndex = 27;
+            this.lblTonkho.Text = "5,255,000";
             // 
             // lblClickTonkho
             // 
@@ -343,9 +343,9 @@
             this.lblClicktopbanchay.ForeColor = System.Drawing.Color.Maroon;
             this.lblClicktopbanchay.Location = new System.Drawing.Point(253, 13);
             this.lblClicktopbanchay.Name = "lblClicktopbanchay";
-            this.lblClicktopbanchay.Size = new System.Drawing.Size(401, 38);
+            this.lblClicktopbanchay.Size = new System.Drawing.Size(391, 38);
             this.lblClicktopbanchay.TabIndex = 24;
-            this.lblClicktopbanchay.Text = "THEO DÕI ĐƠN NHẬP HÀNG";
+            this.lblClicktopbanchay.Text = "THEO DÕI HÀNG BÁN CHẠY";
             // 
             // guna2Panel2
             // 
@@ -699,17 +699,6 @@
             this.lblManguoidung.TabIndex = 14;
             this.lblManguoidung.Text = "Mã user";
             // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2VSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2VSeparator1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(1047, 12);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(11, 66);
-            this.guna2VSeparator1.TabIndex = 0;
-            // 
             // picAnh
             // 
             this.picAnh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -723,6 +712,17 @@
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAnh.TabIndex = 1;
             this.picAnh.TabStop = false;
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2VSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2VSeparator1.FillColor = System.Drawing.Color.DimGray;
+            this.guna2VSeparator1.Location = new System.Drawing.Point(1047, 12);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(11, 66);
+            this.guna2VSeparator1.TabIndex = 0;
             // 
             // guna2Panel1
             // 
@@ -1095,6 +1095,7 @@
             this.btnDangxuat1.Size = new System.Drawing.Size(260, 50);
             this.btnDangxuat1.TabIndex = 7;
             this.btnDangxuat1.Text = "Đăng xuất";
+            this.btnDangxuat1.Click += new System.EventHandler(this.btnDangxuat1_Click);
             // 
             // FrmGiaodienquanlykho
             // 
@@ -1136,16 +1137,16 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlBanchay;
         private System.Windows.Forms.Label lblDaduyet;
         private System.Windows.Forms.Label lblPhieudexuat;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblChoduyet;
         private System.Windows.Forms.Label lblNhap;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label label;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlDoanhthu;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTonkho;
         private System.Windows.Forms.Label lblClickTonkho;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlDonhang;
         private LiveCharts.WinForms.CartesianChart chartTop5;
