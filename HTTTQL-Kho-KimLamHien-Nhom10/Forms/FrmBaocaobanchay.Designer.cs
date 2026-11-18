@@ -59,8 +59,8 @@
             this.columnchartBanchay = new LiveCharts.WinForms.CartesianChart();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.numSoluong = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDS)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
@@ -158,6 +158,7 @@
             this.btnXuat.Size = new System.Drawing.Size(216, 65);
             this.btnXuat.TabIndex = 1;
             this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnXem
             // 
@@ -174,7 +175,8 @@
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(216, 68);
             this.btnXem.TabIndex = 0;
-            this.btnXem.Text = "Xem chi tiết";
+            this.btnXem.Text = "Xem";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // guna2Panel7
             // 
@@ -496,17 +498,6 @@
             this.guna2Panel4.Size = new System.Drawing.Size(266, 179);
             this.guna2Panel4.TabIndex = 39;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 25);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Nhập số sản phẩm";
-            // 
             // numSoluong
             // 
             this.numSoluong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -521,6 +512,18 @@
             this.numSoluong.Size = new System.Drawing.Size(231, 45);
             this.numSoluong.TabIndex = 46;
             this.numSoluong.UpDownButtonFillColor = System.Drawing.Color.BurlyWood;
+            this.numSoluong.ValueChanged += new System.EventHandler(this.numSoluong_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 25);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Nhập số sản phẩm";
             // 
             // FrmBaocaobanchay
             // 

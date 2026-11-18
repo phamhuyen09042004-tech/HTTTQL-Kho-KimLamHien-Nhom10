@@ -117,6 +117,7 @@
             this.dgvChitiet.ThemeStyle.ReadOnly = true;
             this.dgvChitiet.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvChitiet.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvChitiet.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitiet_CellDoubleClick);
             // 
             // guna2Panel3
             // 
@@ -200,6 +201,7 @@
             this.btnXuat.Size = new System.Drawing.Size(260, 65);
             this.btnXuat.TabIndex = 1;
             this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnXem
             // 
@@ -216,7 +218,7 @@
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(260, 68);
             this.btnXem.TabIndex = 0;
-            this.btnXem.Text = "Xem chi tiết";
+            this.btnXem.Text = "Xem";
             // 
             // guna2Panel7
             // 

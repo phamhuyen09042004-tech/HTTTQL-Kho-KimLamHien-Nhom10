@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaocaotonkho));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -562,6 +563,7 @@
             this.btnXuat.Size = new System.Drawing.Size(216, 65);
             this.btnXuat.TabIndex = 1;
             this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnLammoi
             // 
@@ -579,6 +581,7 @@
             this.btnLammoi.Size = new System.Drawing.Size(216, 68);
             this.btnLammoi.TabIndex = 0;
             this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
             // guna2Panel3
             // 
@@ -676,6 +679,7 @@
             this.Controls.Add(this.guna2Panel7);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBaocaotonkho";
             this.Text = "BÁO CÁO TỒN KHO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
