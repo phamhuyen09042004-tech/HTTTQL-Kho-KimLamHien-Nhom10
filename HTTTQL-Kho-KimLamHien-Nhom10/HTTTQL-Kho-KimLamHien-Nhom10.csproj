@@ -117,11 +117,13 @@
   <ItemGroup>
     <Compile Include="BLL\BaocaoBLL.cs" />
     <Compile Include="BLL\GiaodienBLL.cs" />
+    <Compile Include="BLL\NguoidungBLL.cs" />
     <Compile Include="Class\Functions.cs" />
     <Compile Include="Class\Khoitaoservice.cs" />
     <Compile Include="Class\session.cs" />
     <Compile Include="DAL\BaocaoDAL.cs" />
     <Compile Include="DAL\GiaodienDAL.cs" />
+    <Compile Include="DAL\NguoidungDAL.cs" />
     <Compile Include="Forms\FrmBaocaobanchay.cs">
       <SubType>Form</SubType>
     </Compile>

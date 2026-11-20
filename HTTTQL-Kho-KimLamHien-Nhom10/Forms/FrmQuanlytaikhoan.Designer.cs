@@ -95,6 +95,7 @@
             this.btnThem.Size = new System.Drawing.Size(180, 78);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -131,6 +132,7 @@
             this.btnLock.Size = new System.Drawing.Size(180, 78);
             this.btnLock.TabIndex = 3;
             this.btnLock.Text = "Khóa";
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -245,6 +247,7 @@
             this.btnQuaylai.Name = "btnQuaylai";
             this.btnQuaylai.Size = new System.Drawing.Size(67, 67);
             this.btnQuaylai.TabIndex = 13;
+            this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
             // label3
             // 
@@ -295,6 +298,7 @@
             this.btnXem.Size = new System.Drawing.Size(180, 78);
             this.btnXem.TabIndex = 14;
             this.btnXem.Text = "Xem";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // btnSua
             // 
@@ -317,6 +321,7 @@
             this.btnSua.Size = new System.Drawing.Size(180, 78);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnDlaiMK
             // 
@@ -335,6 +340,7 @@
             this.btnDlaiMK.Size = new System.Drawing.Size(180, 73);
             this.btnDlaiMK.TabIndex = 4;
             this.btnDlaiMK.Text = "Đặt lại mật khẩu";
+            this.btnDlaiMK.Click += new System.EventHandler(this.btnDlaiMK_Click);
             // 
             // guna2ShadowPanel2
             // 
@@ -372,6 +378,7 @@
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(65, 63);
             this.btnTimkiem.TabIndex = 2;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // txtTennhanvien
             // 
@@ -399,6 +406,7 @@
             this.txtTennhanvien.Size = new System.Drawing.Size(568, 53);
             this.txtTennhanvien.TabIndex = 16;
             this.txtTennhanvien.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtTennhanvien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTennhanvien_KeyDown);
             // 
             // cboChucvu
             // 
